@@ -54,15 +54,10 @@ ol {
 
 .content {
   max-width: 1140px;
-  max-height: 534px;
   display: grid;
   grid-template-columns: 711px 399px;
-  justify-content: space-between;
-  align-self: center;
-  justify-self: center;
   margin: auto;
   gap: 30px;
-  box-sizing: border-box;
 }
 
 .result {
@@ -75,23 +70,14 @@ ol {
   justify-content: end;
 }
 
-.content__details {
-  grid-column: 2;
-  width: 100%;
-  height: 100%;
-  gap: 17px;
-  padding-top: 35px;
-}
-
 .content__list {
-  max-width: 399px;
-  max-height: 298px;
+  max-height: 276px;
   overflow: scroll;
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: space-around;
-  padding-top: 3px;
+  padding-top: 14px;
 }
 
 .search-form {
@@ -107,27 +93,27 @@ ol {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  gap: 7px;
+  min-height: 534px;
 }
 
 .result__video-container {
-  max-height: 386px;
-  max-height: 711px;
   position: relative;
-  object-fit: strict;
+  max-height: 385px;
 }
 
 .result__video {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  
+  object-fit: cover;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-height: 103px;
+  max-height: 99px;
   position: relative;
 }
 
@@ -135,8 +121,7 @@ ol {
   object-fit: cover;
   object-position: center;
   flex-grow: 0;
-  max-width: 194px;
-  max-height: 103px;
+  max-width: 199px;
 }
 
 .search-form__fieldset-title {
@@ -171,7 +156,7 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 196px;
-  line-height: 1.1;
+  line-height: 0.8999;
 }
 
 .content__video-card-description {
@@ -181,7 +166,7 @@ ol {
   color: #fff;
   overflow: hidden;
   max-height: 60px;
-  line-height: 1.1;
+  line-height: 1.4;
   /*у меня в браузере не работает line-clamp*/
 }
 
@@ -226,7 +211,6 @@ ol {
 
 .more-button {
   width: 100%;
-  align-self: flex-end;
 }
 
 .visually-hidden {
