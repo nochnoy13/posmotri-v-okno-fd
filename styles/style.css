@@ -72,10 +72,11 @@ ol {
 
 .content__list {
   max-height: 276px;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-around;
   padding-top: 14px;
 }
@@ -84,7 +85,6 @@ ol {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-height: 54px;
 }
 
 .content__details {
@@ -94,7 +94,6 @@ ol {
   width: 100%;
   height: 100%;
   gap: 7px;
-  min-height: 534px;
 }
 
 .result__video-container {
@@ -113,7 +112,6 @@ ol {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-height: 99px;
   position: relative;
 }
 
@@ -150,7 +148,7 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 196px;
-  line-height: 0.8999;
+  line-height: 1;
 }
 
 .content__video-card-description {
@@ -173,7 +171,7 @@ ol {
 .button {
   background-color: transparent;
   box-shadow: none;
-  border: 1px solid white;
+  border: 1px solid currentColor;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -228,8 +226,8 @@ ol {
   font-weight: 400;
   font-size: 18px;
   color: white;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+  border-bottom: 1px solid currentColor;
+  border-top: 1px solid currentColor;
   width: 100%;
   border-right: none;
   cursor: pointer;
@@ -247,19 +245,24 @@ ol {
   outline: 1px solid white;
 }
 
-.content__video-card-description-container:hover {
+.content__card-link {
+  display: block;
+}
+
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__video-card-description-container:active {
+.content__card-link:active {
+  background-color: #545050;
+
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
-.content__card-link_current .content__video-card-description-container {
-  background-color: #545050;
-}
-
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
